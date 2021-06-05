@@ -31,18 +31,12 @@ public class App
         App myApp = new App();
 
         String name = myApp.readname();
-        Integer num = myApp.count(name);
-        myApp.outputstring(name, num);
+        myApp.outputstring(name);
     }
 
-    public Integer count(String name)
+    public void outputstring(String name)
     {
         Integer num = name.length();
-        return num;
-    }
-
-    public void outputstring(String name, Integer num)
-    {
         System.out.println(name + " has " + num + " characters.");
     }
 
