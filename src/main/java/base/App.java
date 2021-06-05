@@ -1,4 +1,7 @@
 package base;
+
+import java.util.Scanner;
+
 /*
 
 Exercise 2 - Counting the Number of Characters
@@ -28,11 +31,25 @@ public class App
         App myApp = new App();
 
         String name = myApp.readname();
+        Integer num = myApp.count(name);
+        myApp.outputstring(name, num);
+    }
+
+    public Integer count(String name)
+    {
+        Integer num = name.length();
+        return num;
+    }
+
+    public void outputstring(String name, Integer num)
+    {
+        System.out.println(name + " has " + num + " characters.");
     }
 
     public String readname()
     {
-        System.out.println("What is the input string? ");
-
+        System.out.print("What is the input string? ");
+        String name = in.nextLine();
+        return name;
     }
 }
